@@ -7,15 +7,56 @@
     <title>to-do List - Amos</title>
 
     <!-- CSS External -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css\syle.css">
+
+    <!-- Tailwind CSS CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <!-- Header Content -->
-    <Header></Header>
+    <Header>
+        <h1 class="Text-2xl p-3 font-bold">To-Do List</h1>
+    </Header>
 
     <!-- Main Content-->
-    <main></main>
+    <main>
+        <!-- Form selection -->
+        <selection>
+            <form>
+                <!-- ToDo Input-->
+                <Input class="border p-1 rounded-md" type="text" id="To-Do Input" Placeholder="Enter a new To-Do item">
+
+                <!-- Date Input -->
+                <input class="border p-1 rounded-md" type="date" id="To-Do date" Placeholder="Enter due date">
+            <form>
+            
+            <!-- Add Button-->
+            <Button class="bg-green-600 p-1 rounded-md" onclick="addtodo()" type="button">Add 
+                To-Do</Button>
+        <selection>   
+
+        <!-- Action Section -->
+        <section class="flex pt-2 justify-between">
+            <!-- Clear All Button -->
+            <Button class="border rounded p-1 bg-red-500 text-white">Clear all </Button>
+
+            <!-- Filter Option -->
+            <button class="border rounded p-1 bg-gray-600 text-white">Filter</button>
+        </section>
+
+        <!-- ToDo List Section -->
+        <section class="p-1">
+            <header>
+                <h1 class="text-2xl font-semibold">List To-Do</h1>
+            </header>
+
+            </ul class="p-1" id="To-Do list">
+                <!-- ToDo list item will dynamically added here -->
+                <li>No To-Do available</li>
+            </ul>
+        </section>
+    </main>
 
     <!-- Footer Content-->
     <fotter></fotter>
